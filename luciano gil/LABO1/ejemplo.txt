@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define CANTIDAD 3
+
+int main()
+{
+    int numero;
+    int suma;
+    float promedio;
+    int i;
+
+    suma = 0;
+
+    for(i = 1; i < CANTIDAD + 1; i++)
+    {
+//        printf("Ingrese un numero \n");
+//        scanf("%d", &numero);
+
+        do
+        {
+            printf("Ingrese un numero mayor a 0 \n");
+            scanf("%d", &numero);
+        }while(numero <= 0);
+
+        suma = suma + numero;
+    }
+
+    promedio = (float)suma / CANTIDAD;
+
+    printf("El promedio es %.2f \n", promedio);
+
+    return 0;
+}
